@@ -110,8 +110,6 @@ Try it out: https://.vercel.app/
 
 ## 5. Contributions
 
-[![](https://contrib.rocks/image?repo=EZWin-Clap/FriendDash)](https://github.com/EZWin-Clap/FriendDash/graphs/contributors)
-
 ### [Janaye Cheong](https://www.linkedin.com/in/janaye-cheong-105513/)
 - Developed a responsive front-end for Profile, Login, Help, and Account pages including interactive components for user accessibility and better user experience such as light/dark mode, toasts, Google OAuth, Google reverse geolocation,  and subtle styling. 
 - Took leadership in setting up scalable MongoDB schema and directing data flow along with associated backend endpoints.
