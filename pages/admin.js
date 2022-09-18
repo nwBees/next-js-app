@@ -1,6 +1,17 @@
 import Link from 'next/link';
 
-export default function AdminPage() {
+import { getEntries } from './api/firebase.functions.js';
+
+export async function getStaticProps() {
+  const entries = await getEntries();
+  return {
+    props: {
+      entries
+    },
+  };
+}
+
+export default function AdminPage({ entries }) {
   return (
     <>
       <h1>Admin Page</h1>
