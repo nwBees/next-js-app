@@ -110,15 +110,12 @@ Try it out: https://.vercel.app/
 ## 5. Contributions
 
 ### [Janaye Cheong](https://www.linkedin.com/in/janaye-cheong-105513/)
-- Developed a responsive front-end for Profile, Login, Help, and Account pages including interactive components for user accessibility and better user experience such as light/dark mode, toasts, Google OAuth, Google reverse geolocation,  and subtle styling. 
-- Took leadership in setting up scalable MongoDB schema and directing data flow along with associated backend endpoints.
-- Coordinated and scheduled meetings, weekly scrums, sprint retros, and sprint planning.
-- Deployed application and implemented dynamic routing for profiles.
+- Initiated presets in co:here with user text summarization and artificial intelligence implementation for responses
+- Contributed to UI/UX development with React and Figma
 
 ### [Trisha Sia](https://www.linkedin.com/in/trisha-sia/)
-- Led the overall UI/UX development. Designed the overall App flow and build major UI elements for all pages
-- Build the dashboard, manage orders, and view group order pages, and the associated components.
-- Create backend routes and integrated API to the frontend for managing group orders, removing users from orders, and deleting orders. 
+-Took leadership with UI/UX development and wireframing
+-Developed HTML / CSS React elements 
 
 ### [Melvin Teo](https://www.linkedin.com/in/melvinhteo/)
 - Led the development of the caller queue system with React and Next.js
@@ -126,7 +123,6 @@ Try it out: https://.vercel.app/
 - Implemented database to store user summaries and remedies using Firebase Cloud Firestore 
 
 ### [Byron Wang](https://www.linkedin.com/in/byronwang93/)
-- Designed and implemented the whole payment workflow on the front end to allow users to add credit cards and pay for existing orders using saved credit cards, including the payment page and touching on the order management pages as well
-- Designed and implemented the api routes that facilitate communication between the front end and Stripe API, doing things such as redirecting the user to an external Stripe link, creating users/accounts/payments on the Stripe side, and setting up Stripe configurations
-- Created the New Group Order form and sort/filter system on the Dashboard
+- Helped set up Firebase Cloud Firestore
+- Transferred the frontend repository to utilize Nextjs
 
