@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Layout from '../components/layout';
 import React, { useState, useEffect } from 'react';
 import { addEntry } from './api/firebase.functions.js';
+import { Box, Button, Flex, Text } from '@chakra-ui/react';
 
 export default function CallerPage() {
   const [summary, setSummary] = useState('');
@@ -60,16 +60,19 @@ export default function CallerPage() {
   }, [summary]);
 
   return (
-    <Layout>
+    <Flex flexDirection="column" backgroundColor="#fef4ea" w="100vw" h="100vh" p="0" m="0">
       <Head>
           <title>Caller</title>
       </Head>
-      <h2>
-        <Link href="/">Back to home</Link>
-      </h2>
+        <Text pt="20px" ml="40px" color="#295ebb"> <Link href="/">Back to home</Link></Text>
+        <Text fontSize={30} ml="40px" pt="20px" pb="40px" color="#295ebb" className="static-text">
+                Tell me about what's going on.
+            </Text>
       <form>
-        <textarea name="" id="" cols="30" rows="10" placeholder='Enter your text!' value={content} onChange={handleChange}></textarea>
-        <button type='submit' onClick={handleClick}>Submit</button>
+        <Flex ml="40px" flexDirection="column" w="1340px">
+        <textarea name="" id="" cols="30" rows="10" placeholder='Start typing here!' value={content} onChange={handleChange}></textarea>
+        <Button mt="40px" w="100px" border="2px #6da9d6 solid" backgroundColor="#00000000" color="#6da9d6" _hover={{color: "white", backgroundColor: "#5B8ADC"}} type='submit' onClick={handleClick}>Submit</Button>
+        </Flex>
       </form>
       <div id='result' value={summary}>
         {summary}
@@ -77,6 +80,6 @@ export default function CallerPage() {
       <div id='remedies' value={remedies}>
         {remedies}
       </div>
-    </Layout>
+      </Flex>
   );
 }
