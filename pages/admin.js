@@ -13,7 +13,6 @@ export async function getStaticProps() {
 }
 
 export default function AdminPage({ entries }) {
-  const [situation, setSituation] = useState("");
   const [code, setCode] = useState("");
     const correctCode = "HTN2022";
     let router = useRouter();

@@ -26,3 +26,23 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.thetable {
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+td, th {
+  text-align: center;
+  padding: 8px;
+}
+
+td button {
+  padding: 4px 8px;
+}
+
+th {
+  font-weight: bolder;
+}
