@@ -1,5 +1,4 @@
 # [Project](https:) - Helpline Express Tool  
-## [insert project banner]
 
 Helpline wait-times are no joke, with call center agents sometimes being overwhelmed. Rekindle offers a solution, sending summaries to agents in advance to better allow them to focus on caller safety. [Project] is a full stack app wanting to help people seek help quicker. Over the past X years and heightened by the pandemic, over Y people have called to a help line, where the average wait time is Z minutes. 
 
