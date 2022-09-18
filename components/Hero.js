@@ -8,8 +8,8 @@ function Hero() {
             <div className="bg">
                 <img src="/images/hero.png"></img>
                 <div className="content">
-                    <p className="title">nwBees</p>
-                    <p className="little">Tagline tagline tagline tagline.</p>
+                    <p className="title">rekindle</p>
+                    <p className="little">Fortifying Human Connection</p>
                 </div>
                 <a className="ref" href="#about"><p className="learn">Learn more <i className="fa-solid fa-angles-down"></i></p></a>
             </div>
