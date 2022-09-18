@@ -1,0 +1,10 @@
+.footer {
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0.5%;
+    right: 40%;
+    transition: 0.5s ease;
+    color: white;
+    cursor: pointer;
+}

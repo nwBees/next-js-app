@@ -1,0 +1,42 @@
+.code {
+    background-color: #FEF4EA;
+    height: 100vmin;
+    align-items: center;
+    justify-content: center;
+}
+
+.code .title {
+    text-align: center;
+    padding-top: 200px;
+}
+
+.code .code-form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.code .code-form .text-st {
+    padding: 15px;
+    width: 30%;
+    border-radius: 12px;
+    color: #5B8ADC;
+}
+
+.code .code-form .submit-btn {
+    padding: 15px;
+    width: 30%;
+    border-radius: 12px;
+    border: 1px solid #5B8ADC;
+    color: #5B8ADC;
+    background-color: #FEF4EA;
+    transition: 0.3s ease;
+}
+
+.code .code-form .submit-btn:hover {
+    color: white;
+    background-color: #5B8ADC;
+}

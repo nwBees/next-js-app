@@ -1,0 +1,53 @@
+.bg {
+    position: relative;
+}
+
+.start {
+    background: url("/public/images/start.png");
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bolder;
+    color: #5B8ADC;
+    padding-bottom: 50px;
+}
+
+.start .start2 {
+    color: #5B8ADC;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.talk {
+    padding: 20px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.little {
+    font-size: 15px;
+}
+
+p {
+    color:#5B8ADC;
+}
+p span {
+    text-decoration: underline;
+    color: #5B8ADC;
+}
+

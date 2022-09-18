@@ -1,0 +1,44 @@
+.admin {
+    background-color: #FEF4EA;
+    height: 100vmin;
+    color: #5B8ADC;
+    padding: 100px;
+}
+
+.table2 {
+    margin-bottom: 80px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+
+}
+  
+td, th {
+    text-align: center;
+    padding: 8px;
+}
+
+td button {
+    padding: 4px 8px;
+}
+
+th {
+    font-weight: bolder;
+}
+
+span {
+    text-decoration: underline;
+}
+
+.admin .summary {
+    margin: 100px;
+    background-color: #FDF8F4;
+    min-width: 70%;
+    min-height: 50%;
+    border-radius: 12px;
+    padding: 80px;
+}
