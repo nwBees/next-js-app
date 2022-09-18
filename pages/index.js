@@ -1,17 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link';
-import { getNextEntry } from './api/firebase.functions.js';
 
-export async function getStaticProps() {
-  const entryData = await getNextEntry();
-  return {
-    props: {
-      entryData
-    },
-  };
-}
-
-export default function Home({ entryData }) {
+export default function Home() {
   return (
     <div className="container">
       <Head>
@@ -20,8 +10,6 @@ export default function Home({ entryData }) {
       </Head>
 
       <main>
-        { entryData.entryId }
-        { entryData.content }
         <h1 className="title">
           <Link href="/caller">Caller</Link>
         </h1>
