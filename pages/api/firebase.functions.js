@@ -17,20 +17,52 @@ const addEntry = async (summary, remedies) => {
     }
 }
 
-const getNextEntry = async () => {
+const getEntries = async () => {
     try {
         const getSnapshot = await getDocs(entriesRef);
 
-        let data = {};
+        let entries = [];
         getSnapshot.forEach((doc) => {
+            let data = {}
             data[doc.id] = doc.data();
+            entries.push(data)
         });
 
-        return data[Object.keys(data)[Object.keys(data).length - 1]];
+        console.log(entries);
+        return entries; 
     } catch (e) {
         console.log('Unable to get recent entries.', e);
         alert('Sorry, unable to get recent entries! Please try again!');
     }
 }
 
-export { addEntry, getNextEntry }
+// getFirstEntry if below function does not return the elm too
+
+const getAndRemoveFirstEntry = async () => {
+    try {
+        const getSnapshot = await getDocs(entriesRef);
+
+        if (!getSnapshot.empty) {
+            //We know there is one doc in the querySnapshot
+            const queryDocumentSnapshot = getSnapshot.docs[0];
+            return queryDocumentSnapshot.ref.delete();
+        } else {
+            console.log("No document corresponding to the query!");
+            return null;
+        }
+    } catch (e) {
+        console.log('Unable to get next entry.', e);
+        alert('Sorry, unable to get next entry! Please try again!');
+    }
+}
+
+const removeEntryById = async (id) => {
+    try {
+        await deleteDoc(doc(firestore, 'entries', id));
+    } catch (e) {
+        console.log('Unable to delete entry.', e);
+        alert('Sorry, unable to delete entry! Please try again!');
+    }
+}
+
+export { addEntry, getEntries, removeEntryById, getAndRemoveFirstEntry }
