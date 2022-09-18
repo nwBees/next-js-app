@@ -1,12 +1,12 @@
-import { firestore } from '../persistence/firebase.config.js';
+import { firestore } from '../../persistence/firebase.config.js';
 import { addDoc, getDoc, deleteDoc, getDocs, updateDoc, doc, collection } from '@firebase/firestore';
 
 const entriesRef = collection(firestore, 'entries');
 
-const addEntry = async (entryId, content) => {
+const addEntry = async (summary, remedies) => {
     let data = {
-        entryId: entryId, 
-        content: content,
+        summary: summary,
+        remedies: remedies
     }
 
     try {
