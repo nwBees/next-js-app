@@ -1,8 +1,8 @@
-# [Project](https://next-js-app-nwbees.vercel.app/) - Helpline Express Tool  
+# [Project](https://rekindle.vercel.app/) - Hotline Service Tool  
 
 rekindle is an online mental health hotline service accessible to both users and hotline responders. users are encouraged to talk to trained personnel, first describing their situation to an input system; instantaneously, co:here natural language programming intelligence extracts needed information from the user circumstance and provides a summary. The summary of the alleged case is delivered to an open hotline worker/volunteer, who is informed with crucial facts and resources such as emergency phone numbers or counselling options for the user.
 
-Try it out: https://next-js-app-nwbees.vercel.app/
+Try it out: https://rekindle.vercel.app/
 ## 1. Project Description 
 
 ### App Image Previews
@@ -14,6 +14,8 @@ Try it out: https://next-js-app-nwbees.vercel.app/
 
 
 </details>
+
+<br>
 
 ### Tech Stack
 [React](https://reactjs.org/) | [ChakraUI](https://chakra-ui.com/) | [Next.js](https://nextjs.org/) | [Cohere](https://cohere.ai/) | [Firebase](https://firebase.google.com/)  
@@ -33,15 +35,13 @@ Try it out: https://next-js-app-nwbees.vercel.app/
 
 ### Goals
 
-- ✅Caller View
-- ✅Admin View
-- ✅Preserve Call Order 
-
-### Stretch Goals
-
+- ✅Create form for caller input
+- ✅Display calls for admin view
+- ✅Integrate Cohere AI text summarization API 
 - ❌Dark mode
 - ❌Speech-to-text 
 - ❌Twilio Notifications
+- ❌Responsive
 
 <br/>
 
@@ -49,7 +49,7 @@ Try it out: https://next-js-app-nwbees.vercel.app/
 ## 3. Integration of Tech
 
 ### Figma
-- Used Figma to prototype 
+- Used Figma to prototype the UI/UX
 - [Prototype Link](https://www.figma.com/file/Gyrsv5zseQPvExfnGEtlRN/rekindle?node-id=9%3A3)
 
 ### HTML, CSS, JS
@@ -60,7 +60,7 @@ Try it out: https://next-js-app-nwbees.vercel.app/
 - React web framework that fast-tracks the creation of web apps
 
 ### Cohere AI Text Summarization
-- Fed example training data to demonstrate task to model.
+- Fed example training data to demonstrate task to model
 
 ### NoSQL with Firebase Cloud Firestore
 - Set up collections of documents on Cloud Firestore via Firebase JavaScript SDK
@@ -103,5 +103,4 @@ Try it out: https://next-js-app-nwbees.vercel.app/
 
 ### [Byron Wang](https://www.linkedin.com/in/byronwang93/)
 - Helped set up Firebase Cloud Firestore
-- Transferred the frontend repository to utilize Nextjs
-
+- Transferred the frontend repository to utilize Next.js
