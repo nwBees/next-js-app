@@ -28,6 +28,7 @@ export default function CallerPage() {
                                         method: 'POST'
                                       });
     const json = await response.json();
+    console.log(json);
     let oneline = json.body.generations[0].text;
     oneline = oneline.substring(0, oneline.length - 2); 
     // store the summary in database with randomly generated index 
@@ -57,10 +58,10 @@ export default function CallerPage() {
     setHasSubmitted(!hasSubmitted);
   }
 
-  // useEffect(() => {
-  //   const resultElm = document.getElementById('result');
-  //   resultElm.innerHTML = summary; 
-  // }, [summary]);
+  useEffect(() => {
+    const resultElm = document.getElementById('result');
+    resultElm.innerHTML = summary; 
+  }, [summary]);
 
   return (
     <Flex flexDirection="column" backgroundColor="#fef4ea" w="100vw" h="100vh" p="0" m="0">
@@ -84,12 +85,12 @@ export default function CallerPage() {
       {hasSubmitted && 
        <Box fontSize={40} >Thank you for submitting! We'll be with you shortly! :)</Box>
       }
-      {/* <div id='result' value={summary}>
+      <div id='result' value={summary}>
         {summary}
       </div>
       <div id='remedies' value={remedies}>
         {remedies}
-      </div> */}
+      </div>
     </Flex>
   );
 }

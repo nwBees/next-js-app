@@ -31,7 +31,8 @@ const Authenticated = ({ entries }) => {
     //       "This person is in a high risk situation. Acknowledge their feelings of fear or anxiety. Try to calm them from their emotional distress. Offer to help with this person’s feelings in the moment. Be a calming listener and connect them.",
     //   },
     // ]);
-    const [localEntries, setLocalEntries] = useState(entries);
+    // const [localEntries, setLocalEntries] = useState(entries);
+    const [localEntries, setLocalEntries] = useState([]);
 
       const handleClick = (e, summary) => {
         console.log(e);
@@ -50,6 +51,11 @@ const Authenticated = ({ entries }) => {
         let summaryElm = document.getElementById('summary-value');
         summaryElm.innerHTML = summary; 
       }, [summary]);
+
+      useEffect(async () => {
+        let entries = await getEntries();
+        setLocalEntries(entries);
+      }, []);
 
       return (
         <Box pt="30px" textAlign="-webkit-center" className="admin" backgroundColor="#fef4ea" h="100vh">
