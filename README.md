@@ -93,8 +93,8 @@ Try it out: https://next-js-app-nwbees.vercel.app/
 - Contributed to UI/UX development with React and Figma
 
 ### [Trisha Sia](https://www.linkedin.com/in/trisha-sia/)
--Took leadership with UI/UX development and wireframing
--Developed HTML / CSS React elements 
+- Took leadership with UI/UX development and wireframing
+- Developed HTML / CSS React elements 
 
 ### [Melvin Teo](https://www.linkedin.com/in/melvinhteo/)
 - Led the development of the caller queue system with React and Next.js
