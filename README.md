@@ -1,14 +1,17 @@
-# [Project](https:) - Helpline Express Tool  
+# [Project](https://next-js-app-nwbees.vercel.app/) - Helpline Express Tool  
 
-Helpline wait-times are no joke, with call center agents sometimes being overwhelmed. Rekindle offers a solution, sending summaries to agents in advance to better allow them to focus on caller safety. [Project] is a full stack app wanting to help people seek help quicker. Over the past X years and heightened by the pandemic, over Y people have called to a help line, where the average wait time is Z minutes. 
+rekindle is an online mental health hotline service accessible to both users and hotline responders. users are encouraged to talk to trained personnel, first describing their situation to an input system; instantaneously, co:here natural language programming intelligence extracts needed information from the user circumstance and provides a summary. The summary of the alleged case is delivered to an open hotline worker/volunteer, who is informed with crucial facts and resources such as emergency phone numbers or counselling options for the user.
 
-Try it out: https://.vercel.app/
+Try it out: https://next-js-app-nwbees.vercel.app/
 ## 1. Project Description 
 
 ### App Image Previews
 <details>
 	<summary>Expand to view Images</summary>
-	drag and drop 
+	<img width="1400" alt="Screen Shot 2022-09-18 at 7 54 00 AM" src="https://user-images.githubusercontent.com/62491197/190984112-29302c82-ad05-4e9c-9a25-606cd764acb5.png">
+	<img width="1400" alt="Screen Shot 2022-09-18 at 7 54 11 AM" src="https://user-images.githubusercontent.com/62491197/190984133-019035a4-32fc-4d7d-8b51-e0cdf57202d7.png">
+	<img width="1400" alt="Screen Shot 2022-09-18 at 7 54 26 AM" src="https://user-images.githubusercontent.com/62491197/190984146-50d9fdd4-b8bb-42b0-90a6-f0e5a389378e.png">
+
 
 </details>
 
@@ -45,46 +48,22 @@ Try it out: https://.vercel.app/
 ---
 ## 3. Integration of Tech
 
+### Figma
+- Used Figma to prototype 
+- [Prototype Link](https://www.figma.com/file/Gyrsv5zseQPvExfnGEtlRN/rekindle?node-id=9%3A3)
+
 ### HTML, CSS, JS
 - Used Chakra-UI as a frontend React component Library
 - Additionally customized styling using inline CSS
 
-### React 
-- Used React to Create the App and setup structure following best React practices:
-  - Components, and pages folder.
-  - Utility folder that contains commonly used functions
-  - React Prevents DOM injection attacks, and virtual DOM structure reduces page load times by eliminating unnecessary updates
- - Build composable reusable React components
-  - Used Chakra factory function to convert all components to chakra components which allow passing chakra props for us in inline styling
-  - Minimized code repetition
-- Used Redux to track state
-  - Eliminates the need to pass state as props
-- Used Local Storage to store user-specific data
-  - Stores light/dark mode flags
-  - Stores user session information 
-
-### Next.js
-- Set up Express server using NodeJS
-- Setup APIs using Express for:
-  - Getting, Adding, Updating, Removing user data
-  - Getting, Adding, Updating, Removing order data
-  - Getting, Adding, Updating, Removing payments information 
-- How the server helps:
-  - Facilitate communication between the front end and the database to store, change, and retrieve information from MongoDB 
-  - Keeps implementation and data hidden from clients, therefore being more secure than not using a server
+### React & Next.js
+- React web framework that fast-tracks the creation of web apps
 
 ### Cohere AI Text Summarization
-- Fed example training data to demonstrate task to model. 
+- Fed example training data to demonstrate task to model.
 
 ### NoSQL with Firebase Cloud Firestore
-- Set up collections in MongoDB for storing Order and User information so that data is persisted
-  - MongoDB’s NoSQL eliminates the need for relations between tables.
-  - Lower latency for reading/writing to large databases.
-  - Data stored as JSON.
-  - Horizontal scaling rather than vertical scaling.
-- Built a scalable schema design in MongoDB enabling the storage and lookup of:
-  - Real-time orders
-  - User data
+- Set up collections of documents on Cloud Firestore via Firebase JavaScript SDK
 
 ### Release Engineering
 - Deployed frontend on Vercel
