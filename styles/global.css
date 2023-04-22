@@ -16,13 +16,13 @@ body {
   cursor: pointer;
 }
 
-#hero-container {
+/* #hero-container {
   background-image: url("../public/hero.png");
   background-size: cover;
   background-position: center;
-}
+} */
 
-#about-container {
+/* #about-container {
   background-image: url("../public/about.png");
   background-size: cover;
   background-position: center;
@@ -32,7 +32,7 @@ body {
   background-image: url("../public/start.png");
   background-size: cover;
   background-position: center;
-}
+} */
 
 a {
   color: #0070f3;

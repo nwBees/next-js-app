@@ -28,6 +28,11 @@ export default function Home() {
           w="100%"
           height="1135px"
           fontSize="20px"
+          style={{
+            backgroundImage: `url(/hero.png)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
         >
           <Box
             display="flex"
@@ -68,6 +73,11 @@ export default function Home() {
           gridTemplateRows="1.5fr 0.5fr 3fr"
           justifyContent="center"
           alignItems="center"
+          style={{
+            backgroundImage: `url(/about.png)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
         >
           <Text
             fontSize="40px"
@@ -98,9 +108,20 @@ export default function Home() {
           justifyContent="center"
           alignItems="center"
           h="1135px"
+          style={{
+            backgroundImage: `url(/start.png)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
         >
           <Box display="flex" flexDirection="column">
-            <Text fontWeight="bold" fontSize="40px" color="#6da9d6" pb="30px" textAlign="center">
+            <Text
+              fontWeight="bold"
+              fontSize="40px"
+              color="#6da9d6"
+              pb="30px"
+              textAlign="center"
+            >
               Get Started
             </Text>
             <Button
