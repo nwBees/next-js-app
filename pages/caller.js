@@ -2,7 +2,16 @@ import Link from "next/link";
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import { addEntry } from "./api/firebase.functions.js";
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Text,
+  FormControl,
+  FormLabel,
+  Input,
+  Textarea,
+} from "@chakra-ui/react";
 
 export default function CallerPage() {
   const [summary, setSummary] = useState("");
@@ -82,7 +91,6 @@ export default function CallerPage() {
         <title>Caller</title>
       </Head>
       <Text pt="20px" ml="40px" color="#295ebb">
-        {" "}
         <Link href="/">Back to home</Link>
       </Text>
       {!hasSubmitted && (
@@ -98,43 +106,38 @@ export default function CallerPage() {
         </Text>
       )}
       {!hasSubmitted && (
-        <form>
-          <Flex ml="40px" flexDirection="column" w="1340px">
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="Start typing here!"
-              value={content}
-              onChange={handleChange}
-            ></textarea>
-            <Button
-              mt="40px"
-              w="100px"
-              border="2px #6da9d6 solid"
-              backgroundColor="#00000000"
-              color="#6da9d6"
-              _hover={{ color: "white", backgroundColor: "#5B8ADC" }}
-              type="submit"
-              onClick={handleClick}
-            >
-              Submit
-            </Button>
-          </Flex>
-        </form>
+        <Flex ml="40px" flexDirection="column" w="1340px">
+          <Textarea
+            w="80%"
+            placeholder="Start typing here! Feel free to share as much as you're comfortable sharing."
+            value={content}
+            onChange={handleChange}
+          ></Textarea>
+          <Button
+            mt="40px"
+            w="100px"
+            border="2px #6da9d6 solid"
+            backgroundColor="#00000000"
+            color="#6da9d6"
+            _hover={{ color: "white", backgroundColor: "#5B8ADC" }}
+            type="submit"
+            onClick={handleClick}
+          >
+            Submit
+          </Button>
+        </Flex>
       )}
       {hasSubmitted && (
         <Box fontSize={40}>
           Thank you for submitting! We'll be with you shortly! :)
         </Box>
       )}
-      <div id="result" value={summary}>
+      <Box id="result" value={summary}>
         {summary}
-      </div>
-      <div id="remedies" value={remedies}>
+      </Box>
+      <Box id="remedies" value={remedies}>
         {remedies}
-      </div>
+      </Box>
     </Flex>
   );
 }

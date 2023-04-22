@@ -1,21 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700&display=swap");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Mukta', sans-serif;
   line-height: 1.6;
-  font-size: 18px;
 }
 
 * {
   box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+}
+
+#logo-container {
+  cursor: pointer;
+}
+
+#hero-container {
+  background-image: url("../public/hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#about-container {
+  background-image: url("../public/about.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#start-container {
+  background-image: url("../public/start.png");
+  background-size: cover;
+  background-position: center;
 }
 
 a {
   color: #0070f3;
   text-decoration: none;
+  font-size: 30px;
 }
 
 a:hover {
@@ -24,7 +46,7 @@ a:hover {
 
 img {
   max-width: 100%;
-  display: block;
+  height: auto;
 }
 
 .thetable {
@@ -34,7 +56,8 @@ img {
   margin-bottom: 80px;
 }
 
-td, th {
+td,
+th {
   text-align: center;
   padding: 8px;
 }
