@@ -16,24 +16,6 @@ body {
   cursor: pointer;
 }
 
-/* #hero-container {
-  background-image: url("../public/hero.png");
-  background-size: cover;
-  background-position: center;
-} */
-
-/* #about-container {
-  background-image: url("../public/about.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#start-container {
-  background-image: url("../public/start.png");
-  background-size: cover;
-  background-position: center;
-} */
-
 a {
   color: #0070f3;
   text-decoration: none;
@@ -69,3 +51,18 @@ td button {
 th {
   font-weight: bolder;
 }
+
+/* Chatbot */
+
+/* #chatbot-content {
+  animation: slide-up 0.5s ease;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+} */
