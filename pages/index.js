@@ -20,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box display="flex" flexDirection="column" justifyContent="center">
-        <Navbar />
+        <Navbar isAdmin={false}/>
         <Box
           id="hero-container"
           display="grid"

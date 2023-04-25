@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { getEntries } from "./api/firebase.functions.js";
 
 import Navbar from "../components/Navbar.js";
+import AdminSignUpForm from "../components/AdminSignUpForm.js";
 
 export default function AdminPage() {
   const [code, setCode] = useState("");
@@ -41,7 +42,10 @@ export default function AdminPage() {
         h="calc(100vh - 80px)"
         className="enter"
       >
-        <Text fontWeight="bold" color="#295ebb" fontSize={30} className="title">
+        <Text fontWeight="bold" color="#295ebb" fontSize="30px" className="title" pb="40px">
+          Sign up to save lives
+        </Text>
+        {/* <Text fontWeight="bold" color="#295ebb" fontSize={30} className="title">
           Enter the code provided to you.
         </Text>
         <FormControl pl="50px" pr="50px" pt="50px" pb="50px">
@@ -68,7 +72,8 @@ export default function AdminPage() {
           onClick={handleSubmit}
         >
           Submit
-        </Button>
+        </Button> */}
+        <AdminSignUpForm />
       </Box>
     </Box>
   );

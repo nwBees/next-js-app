@@ -13,6 +13,8 @@ export async function getStaticProps() {
   };
 }
 
+// TODO: make authenticated more personalized to the user who is logged in
+
 const Authenticated = ({ entries }) => {
   const [summary, setSummary] = useState("");
   // const [entries, setEntries] = useState([
@@ -64,7 +66,7 @@ const Authenticated = ({ entries }) => {
 
   return (
     <Box>
-      <Navbar />
+      <Navbar isAdmin={true} />
       <Box
         pt="30px"
         textAlign="-webkit-center"
