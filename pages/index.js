@@ -2,6 +2,7 @@ import { Button, Icon, Text, Box } from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import Chatbot from "../components/Chatbot";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { useRouter } from "next/router";
 
@@ -13,7 +14,7 @@ export default function Home() {
   }
 
   return (
-    <div className="container">
+    <Box className="container">
       <Head>
         <title>rekindle</title>
         <link rel="icon" href="/favicon.ico" />
@@ -30,8 +31,8 @@ export default function Home() {
           fontSize="20px"
           style={{
             backgroundImage: `url(/hero.png)`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <Box
@@ -75,8 +76,8 @@ export default function Home() {
           alignItems="center"
           style={{
             backgroundImage: `url(/about.png)`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <Text
@@ -110,8 +111,8 @@ export default function Home() {
           h="1135px"
           style={{
             backgroundImage: `url(/start.png)`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <Box display="flex" flexDirection="column">
@@ -144,7 +145,8 @@ export default function Home() {
             </Link>{" "}
           </Text>
         </Box>
+        <Chatbot />
       </Box>
-    </div>
+    </Box>
   );
 }
