@@ -19,7 +19,7 @@ const Navbar = ({ isAdmin }) => {
   };
 
   function goToLogin() {
-    // router.push("/caller");
+    router.push("/login");
   }
 
   function goToCaller() {

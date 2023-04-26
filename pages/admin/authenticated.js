@@ -1,8 +1,14 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 import React from "react";
 import { useState, useEffect } from "react";
 import { getEntries, removeEntryById } from "../api/firebase.functions.js";
 import Navbar from "../../components/Navbar.js";
+
+import { getAdminByUid } from "../api/firebase.admin.functions.js";
+
+import { auth } from "../../persistence/firebase.config.js";
+
+const user = auth.currentUser;
 
 export async function getStaticProps() {
   const entries = await getEntries();
@@ -36,6 +42,7 @@ const Authenticated = ({ entries }) => {
   // ]);
   // const [localEntries, setLocalEntries] = useState(entries);
   const [localEntries, setLocalEntries] = useState([]);
+  const [localAdminCreds, setLocalAdminCreds] = useState({});
 
   const handleClick = (e, summary) => {
     console.log(e);
@@ -61,7 +68,14 @@ const Authenticated = ({ entries }) => {
       setLocalEntries(entries);
     };
 
+    const fetchCurrentAdmin = async () => {
+      let adminCreds = await getAdminByUid(user.uid);
+      console.log(adminCreds);
+      setLocalAdminCreds(adminCreds);
+    };
+
     fetchData();
+    fetchCurrentAdmin();
   }, []);
 
   return (
@@ -73,6 +87,7 @@ const Authenticated = ({ entries }) => {
         className="admin"
         backgroundColor="#fef4ea"
       >
+        <Text>Hello {localAdminCreds.firstName}</Text>
         <div className="table2">
           <table className="thetable">
             <thead>

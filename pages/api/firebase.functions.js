@@ -36,7 +36,6 @@ const getEntries = async () => {
       entries.push(data);
     });
 
-    console.log(entries);
     return entries;
   } catch (e) {
     console.log("Unable to get recent entries.", e);

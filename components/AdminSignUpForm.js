@@ -128,7 +128,7 @@ const AdminSignUpForm = () => {
         />
       </FormControl>
 
-      <FormControl id="picture-id">
+      <FormControl id="picture-id" isRequired>
         <FormLabel>Government ID</FormLabel>
         <Input
           type="file"
@@ -138,7 +138,7 @@ const AdminSignUpForm = () => {
         <FormHelperText>Upload a picture of a piece of government issued ID</FormHelperText>
       </FormControl>
 
-      <FormControl id="pdf-file">
+      <FormControl id="pdf-file" isRequired>
         <FormLabel>Certification Upload</FormLabel>
         <Input
           type="file"
@@ -161,8 +161,8 @@ const AdminSignUpForm = () => {
       </Button>
 
       {error && (
-        <Box mt="10px" color="red.500">
-          <FormErrorMessage>{error}</FormErrorMessage>
+        <Box mt="10px" color="red.500" w="300px">
+          <Text>{error}</Text>
         </Box>
       )}
     </form>

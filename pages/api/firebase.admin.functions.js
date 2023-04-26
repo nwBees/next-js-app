@@ -2,7 +2,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { storage } from "../../persistence/firebase.config.js";
 
 import { firestore } from "../../persistence/firebase.config.js";
-import { addDoc, collection } from "@firebase/firestore";
+import { addDoc, collection, getDocs, where, query } from "@firebase/firestore";
 
 const adminsRef = collection(firestore, "admins");
 
@@ -18,10 +18,7 @@ const createAdmin = async (
 ) => {
   try {
     const picIdImageRef = ref(storage, `images/${pictureId.name}`);
-    const picIdSnapshot = await uploadBytes(
-      picIdImageRef,
-      pictureId
-    );
+    const picIdSnapshot = await uploadBytes(picIdImageRef, pictureId);
     console.log("Image uploaded:", picIdSnapshot.ref.fullPath);
 
     // Get the download URL for the uploaded image
@@ -57,4 +54,19 @@ const createAdmin = async (
   }
 };
 
-export { createAdmin };
+const getAdminByUid = async (id) => {
+  try {
+    const querySnapshot = await getDocs(
+      query(adminsRef, where("id", "==", id))
+    );
+
+    const adminDocs = querySnapshot.docs;
+    const admins = adminDocs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    return admins[0];
+  } catch (error) {
+    console.log("Error getting document:", error);
+    return null;
+  }
+};
+
+export { createAdmin, getAdminByUid };
