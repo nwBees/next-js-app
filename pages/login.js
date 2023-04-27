@@ -1,34 +1,12 @@
 import {
   Box,
-  Button,
-  Text,
-  FormControl,
-  FormLabel,
-  FormHelperText,
-  Input,
+  Text
 } from "@chakra-ui/react";
-import { useRouter } from "next/router.js";
-import { useEffect, useState } from "react";
-import { getEntries } from "./api/firebase.functions.js";
 
 import Navbar from "../components/Navbar.js";
 import AdminLoginForm from "../components/AdminLoginForm.js";
 
 export default function AdminPage() {
-  const [code, setCode] = useState("");
-
-  const correctCode = "HTN2022";
-  let router = useRouter();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (code == correctCode) {
-      router.push("/admin/authenticated");
-    } else {
-      alert("Wrong code. Try again.");
-    }
-  };
-
   return (
     <Box>
       <Navbar />

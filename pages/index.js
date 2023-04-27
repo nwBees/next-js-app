@@ -20,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box display="flex" flexDirection="column" justifyContent="center">
-        <Navbar isAdmin={false}/>
+        <Navbar isAdmin={false} />
         <Box
           id="hero-container"
           display="grid"
@@ -114,8 +114,14 @@ export default function Home() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
+          gridTemplateRows="200px 1fr"
         >
-          <Box display="flex" flexDirection="column">
+          <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Text
               fontWeight="bold"
               fontSize="40px"
@@ -133,17 +139,56 @@ export default function Home() {
               border="2px #6da9d6 solid"
               backgroundColor="#00000000"
               color="#6da9d6"
+              w="200px"
             >
               Talk to someone
             </Button>
           </Box>
-          <Text fontSize="30px" color="#6da9d6" textAlign="center">
-            {" "}
-            Admin? Enter{" "}
-            <Link id="admin-link" href="/admin">
-              here
-            </Link>{" "}
-          </Text>
+          <Box display="flex" flexDirection="column">
+            <Text
+              fontSize="40px"
+              fontWeight="700"
+              color="#6da9d6"
+              textAlign="center"
+            >
+              Interested in volunteering as an admin?
+            </Text>
+            <Text
+              color="#6da9d6"
+              pl="100px"
+              pr="100px"
+              pb="70px"
+              pt="70px"
+              textAlign="center"
+              fontSize="20px"
+            >
+              Apply to become a responder to provide support and care for people
+              in need. Responders must provide proper certification and undergo
+              specialized training before responding to callers. Only selected
+              applicants will be contacted by our team to continue forward with
+              the training process.
+            </Text>
+            <Box
+              display="flex"
+              color="#6da9d6"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Text fontSize="30px" textAlign="center" pr="6px">
+                {" "}
+                Ready to respond to the call? Apply{" "}
+              </Text>
+              <Link id="admin-link" href="/admin">
+                <Text
+                  fontWeight="700"
+                  fontSize="30px"
+                  _hover={{ cursor: "pointer", textDecoration: "underline" }}
+                >
+                  here
+                </Text>
+              </Link>
+            </Box>
+          </Box>
         </Box>
         <Chatbot />
       </Box>

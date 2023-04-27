@@ -6,12 +6,11 @@ import {
   Text,
   FormControl,
   FormLabel,
-  FormHelperText,
-  FormErrorMessage,
   Input,
+  Link,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 const AdminLoginForm = () => {
@@ -27,7 +26,15 @@ const AdminLoginForm = () => {
       await loginUser(email, password);
       router.push("/admin/authenticated");
     } catch (error) {
-      setErrorMessage(error.message);
+      if (error.message === "Firebase: Error (auth/wrong-password).") {
+        setErrorMessage("Wrong password! Please try again.");
+      } else if (error.message === "Firebase: Error (auth/user-not-found).") {
+        setErrorMessage(
+          "Email does not exist! Please try again or please sign up."
+        );
+      } else {
+        setErrorMessage(error.message);
+      }
       console.log(errorMessage);
       console.log(error);
     }
@@ -106,6 +113,24 @@ const AdminLoginForm = () => {
         >
           Login
         </Button>
+        <Box
+          fontSize="20px"
+          color="#6da9d6"
+          textAlign="center"
+          display="flex"
+          mt="40px"
+        >
+          <Text pr="4px">Apply to be an admin </Text>
+          <Link as={NextLink} id="admin-link" href="/admin">
+            <Text
+              fontWeight="700"
+              fontSize="20px"
+              _hover={{ cursor: "pointer", textDecoration: "underline" }}
+            >
+              here
+            </Text>
+          </Link>
+        </Box>
 
         {errorMessage && (
           <Box mt="10px" color="red.500" w="300px">
