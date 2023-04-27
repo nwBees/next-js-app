@@ -13,6 +13,9 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 
+// TODO: after caller submits, make a call to DALL-E to generate fun images; keep the chatbot popup available on the bottom left 
+// turn this into a component and move it to the main landing page
+
 export default function CallerPage() {
   const [summary, setSummary] = useState("");
   const [remedies, setRemedies] = useState("");
