@@ -35,8 +35,6 @@ const AdminLoginForm = () => {
       } else {
         setErrorMessage(error.message);
       }
-      console.log(errorMessage);
-      console.log(error);
     }
   };
 
@@ -49,7 +47,6 @@ const AdminLoginForm = () => {
 
     if (!isValidEmail(email)) {
       setErrorMessage("Email is invalid. Please try again.");
-      console.log("fail");
     } else {
       setErrorMessage("");
     }

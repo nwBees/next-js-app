@@ -33,8 +33,6 @@ const Authenticated = () => {
   const [localAdminCreds, setLocalAdminCreds] = useState({});
 
   const handleClick = (e, content) => {
-    console.log(e);
-    console.log(content);
     setCallerContent(content);
   };
 
@@ -52,7 +50,6 @@ const Authenticated = () => {
 
     const fetchCurrentAdmin = async () => {
       let adminCreds = await getAdminByUid(user.uid);
-      console.log(adminCreds);
       setLocalAdminCreds(adminCreds);
     };
 

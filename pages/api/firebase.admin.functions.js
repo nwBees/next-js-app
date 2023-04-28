@@ -17,7 +17,7 @@ const createAdmin = async (
   credentials
 ) => {
   try {
-    const picIdImageRef = ref(storage, `images/${pictureId.name}`);
+    const picIdImageRef = ref(storage, `profilePics/${pictureId.name}`);
     const picIdSnapshot = await uploadBytes(picIdImageRef, pictureId);
     console.log("Image uploaded:", picIdSnapshot.ref.fullPath);
 
@@ -25,7 +25,7 @@ const createAdmin = async (
     const picIdUrl = await getDownloadURL(picIdImageRef);
     console.log("Download URL:", picIdUrl);
 
-    const credentialsImageRef = ref(storage, `images/${credentials.name}`);
+    const credentialsImageRef = ref(storage, `credentials/${credentials.name}`);
     const credentialsPicSnapshot = await uploadBytes(
       credentialsImageRef,
       credentials
