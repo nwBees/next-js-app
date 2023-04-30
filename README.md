@@ -10,10 +10,11 @@ Try it out: https://rekindle.vercel.app/
 
 <details>
 	<summary>Expand to view Images</summary>
-	<img width="1400" alt="Screen Shot 2022-09-18 at 7 54 00 AM" src="https://user-images.githubusercontent.com/62491197/190984112-29302c82-ad05-4e9c-9a25-606cd764acb5.png">
-	<img width="1400" alt="Screen Shot 2022-09-18 at 7 54 11 AM" src="https://user-images.githubusercontent.com/62491197/190984133-019035a4-32fc-4d7d-8b51-e0cdf57202d7.png">
-	<img width="1400" alt="Screen Shot 2022-09-18 at 7 54 26 AM" src="https://user-images.githubusercontent.com/62491197/190984146-50d9fdd4-b8bb-42b0-90a6-f0e5a389378e.png">
-
+	<img width="1400" alt="rekindle home page" src="https://user-images.githubusercontent.com/62491197/235338558-0842786f-f14b-4ef6-8742-331d27a5fc7d.png">
+	<img width="1400" alt="rekindle caller information page" src="https://user-images.githubusercontent.com/62491197/235338582-c8db66c5-89cb-492e-969b-27d818bdc88d.png">
+	<img width="1400" alt="rekindle responder dashboard" src="https://user-images.githubusercontent.com/62491197/235338584-787c320a-9fd0-4e77-b249-4a6277760136.png">
+	<img width="1400" alt="rekindle caller wait page" src="https://user-images.githubusercontent.com/62491197/235338586-6fb5bca3-3b35-46bb-97b9-f67040a8f831.png">
+	<img width="1400" alt="rekindle login page" src="https://user-images.githubusercontent.com/62491197/235338589-47486a04-d86b-4799-a428-9a6a6ebe74dd.png">
 </details>
 
 <br>
