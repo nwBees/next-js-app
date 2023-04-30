@@ -2,6 +2,7 @@ import { Box, Text } from "@chakra-ui/react";
 
 import Navbar from "../components/Navbar.js";
 import AdminSignUpForm from "../components/AdminSignUpForm.js";
+import Head from "next/head";
 
 export default function AdminPage() {
   return (
