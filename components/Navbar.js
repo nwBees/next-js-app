@@ -41,6 +41,7 @@ const Navbar = ({ isAdmin }) => {
         display="flex"
         justifyContent="center"
         alignItems="center"
+        _hover={{ cursor: "pointer" }}
       >
         <Text fontSize="28px" color="#5B8ADC" pl="50px" onClick={goHome}>
           rekindle

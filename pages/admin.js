@@ -24,8 +24,8 @@ export default function AdminPage() {
       >
         <Text
           fontWeight="bold"
-          color="#295ebb"
-          fontSize="30px"
+          color="#6da9d6"
+          fontSize="40px"
           className="title"
           pb="40px"
         >

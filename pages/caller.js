@@ -45,7 +45,7 @@ export default function CallerPage() {
         },
         body: JSON.stringify({
           model: "text-davinci-003",
-          prompt: `Please summarize the general feelings/state of a person in crisis who has provided this information assuming that you are providing a report that a crisis line responder will use to help respond to the person in crisis: "${content}".`,
+          prompt: `Please summarize the general feelings/state using grammatically correct sentences of a person in crisis who has provided this information assuming that you are providing a report that a crisis line responder will use to help respond to the person in crisis: "${content}".`,
           temperature: 0.5,
         }),
       }
@@ -106,7 +106,6 @@ export default function CallerPage() {
       display="flex"
       flexDirection="column"
       backgroundColor="#fef4ea"
-      // minHeight="100vh"
     >
       <Head>
         <title>rekindle - Caller Information</title>
