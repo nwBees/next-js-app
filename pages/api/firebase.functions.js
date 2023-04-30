@@ -11,8 +11,19 @@ import {
 
 const entriesRef = collection(firestore, "entries");
 
-const addEntry = async (summary, remedies) => {
+const addEntry = async (
+  firstName,
+  lastName,
+  phone,
+  rawContent,
+  summary,
+  remedies
+) => {
   let data = {
+    firstName: firstName,
+    lastName: lastName,
+    phone: phone,
+    rawContent: rawContent,
     summary: summary,
     remedies: remedies,
   };
@@ -20,8 +31,7 @@ const addEntry = async (summary, remedies) => {
   try {
     await addDoc(entriesRef, data);
   } catch (e) {
-    console.log("Unable to add recent route.", e);
-    alert("Sorry, unable to add recent route! Please try again!");
+    console.log("Unable to add recent entry.", e);
   }
 };
 
@@ -39,7 +49,6 @@ const getEntries = async () => {
     return entries;
   } catch (e) {
     console.log("Unable to get recent entries.", e);
-    alert("Sorry, unable to get recent entries! Please try again!");
   }
 };
 
@@ -59,7 +68,6 @@ const getAndRemoveFirstEntry = async () => {
     }
   } catch (e) {
     console.log("Unable to get next entry.", e);
-    alert("Sorry, unable to get next entry! Please try again!");
   }
 };
 
@@ -68,7 +76,6 @@ const removeEntryById = async (id) => {
     await deleteDoc(doc(firestore, "entries", id));
   } catch (e) {
     console.log("Unable to delete entry.", e);
-    alert("Sorry, unable to delete entry! Please try again!");
   }
 };
 

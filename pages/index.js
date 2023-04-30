@@ -15,7 +15,7 @@ export default function Home() {
   }
 
   return (
-    <Box className="container">
+    <Box>
       <Head>
         <title>rekindle</title>
         <link rel="icon" href="/favicon.ico" />
@@ -66,6 +66,7 @@ export default function Home() {
             <Icon fontSize="30px" as={FaAngleDoubleDown} />
           </Box>
         </Box>
+
         <Box
           id="about-container"
           w="100%"
@@ -121,22 +122,19 @@ export default function Home() {
             >
               Meet our Responders
             </Text>
-            <Box
-              display="grid"
-              gridTemplateColumns="repeat(3, 1fr)"
-              justifyContent="center"
-              gap="20px"
-            >
+            <Box display="flex" justifyContent="center">
               <Box
-                display="grid"
+                display="flex"
                 flexDirection="column"
-                w="300px"
+                minWidth="30%"
                 backgroundColor="#6da9d6"
                 p="20px"
                 borderRadius="20px"
                 color="white"
               >
-                <Image src="/profilePics/jeff.jpg" width={300} height={200} />
+                <Box display="flex" justifyContent="center">
+                  <Image src="/profilePics/jeff.jpg" width={300} height={200} />
+                </Box>
                 <Text textAlign="center" pt="10px" pb="10px">
                   Jeff Rossum
                 </Text>
@@ -149,13 +147,21 @@ export default function Home() {
               <Box
                 display="flex"
                 flexDirection="column"
-                w="300px"
+                minWidth="30%"
                 backgroundColor="#6da9d6"
                 p="20px"
                 borderRadius="20px"
                 color="white"
+                ml="20px"
+                mr="20px"
               >
-                <Image src="/profilePics/janet.jpg" width={300} height={200} />
+                <Box display="flex" justifyContent="center">
+                  <Image
+                    src="/profilePics/janet.jpg"
+                    width={300}
+                    height={200}
+                  />
+                </Box>
                 <Text textAlign="center" pt="10px" pb="10px">
                   Janet Bertuzzi
                 </Text>
@@ -167,15 +173,21 @@ export default function Home() {
                 </Text>
               </Box>
               <Box
-                display="grid"
+                display="flex"
                 flexDirection="column"
-                w="300px"
+                minWidth="30%"
                 backgroundColor="#6da9d6"
                 p="20px"
                 borderRadius="20px"
                 color="white"
               >
-                <Image src="/profilePics/laura.jpg" width={300} height={200} />
+                <Box display="flex" justifyContent="center">
+                  <Image
+                    src="/profilePics/laura.jpg"
+                    width={300}
+                    height={200}
+                  />
+                </Box>
                 <Text textAlign="center" pt="10px" pb="10px">
                   Laura Tarter
                 </Text>
@@ -189,6 +201,7 @@ export default function Home() {
             </Box>
           </Box>
         </Box>
+
         <Box
           w="100%"
           id="start-container"
@@ -213,11 +226,24 @@ export default function Home() {
               fontWeight="bold"
               fontSize="40px"
               color="#6da9d6"
-              pt="50px"
-              pb="30px"
               textAlign="center"
             >
               Get Started
+            </Text>
+            <Text
+              color="#6da9d6"
+              pl="100px"
+              pr="100px"
+              pb="30px"
+              pt="10px"
+              textAlign="center"
+              fontSize="20px"
+            >
+              Jot down a quick description of how you're feeling, and we'll
+              match you with a responder as soon as possible! Enjoy some
+              relaxing images while you wait! You can also take the chance to
+              talk to Kiply, our resident AI Responder that has been built to
+              listen to you.
             </Text>
             <Button
               onClick={goToCaller}
