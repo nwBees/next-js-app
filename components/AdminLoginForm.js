@@ -99,6 +99,11 @@ const AdminLoginForm = () => {
             }}
           />
         </FormControl>
+        {errorMessage && (
+          <Box mt="10px" color="red.500" w="300px" textAlign="center">
+            <Text>{errorMessage}</Text>
+          </Box>
+        )}
         <Button
           mt="20px"
           type="submit"
@@ -128,12 +133,6 @@ const AdminLoginForm = () => {
             </Text>
           </Link>
         </Box>
-
-        {errorMessage && (
-          <Box mt="10px" color="red.500" w="300px">
-            <Text>{errorMessage}</Text>
-          </Box>
-        )}
       </Box>
     </form>
   );
